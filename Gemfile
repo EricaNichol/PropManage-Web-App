@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'country-select'
 gem 'simple_form'
 gem 'faker'
 gem 'cancancan'

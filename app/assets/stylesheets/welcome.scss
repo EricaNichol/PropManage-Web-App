@@ -1,3 +1,22 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#brand {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}
+
+#navbar {
+  height: 65px;
+}
+
+#menuButton {
+  border: none;
+  background: transparent;
+  padding-top: 15px;
+}
+
+#SignInMenu {
+  padding-left: 20px;
+}

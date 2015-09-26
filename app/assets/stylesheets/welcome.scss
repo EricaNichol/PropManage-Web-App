@@ -3,12 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #brand {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 30px;
 }
 
-#navbar {
+.navbar-default {
   height: 65px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #FF6866;
 }
 
 #menuButton {

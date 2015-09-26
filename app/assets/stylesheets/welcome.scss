@@ -1,3 +1,24 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#brand {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+.navbar-default {
+  height: 65px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #FF6866;
+}
+
+#menuButton {
+  border: none;
+  background: transparent;
+  padding-top: 15px;
+}
+
+#SignInMenu {
+  padding-left: 20px;
+}

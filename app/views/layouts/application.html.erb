@@ -2,13 +2,19 @@
 <html>
 <head>
   <title>ProjectErica</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= render '/navbar/nav' %>
 <%= yield %>
+
+<script>
+  $('.dropdown-toggle').dropdown('toggle');
+</script>
 
 </body>
 </html>

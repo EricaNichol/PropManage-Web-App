@@ -5,7 +5,8 @@
   <%= f.input :suite_no %>
   <%= f.input :postal %>
   <%= f.input :city %>
-  <%= f.country_select :country %>
+  <%= f.input :image %>
+  <%= f.input :country, as: :select, collection: ActionView::Helpers::FormOptionsHelper::COUNTRIES  %>
 <%= f.submit "List", class: "btn btn-primary btn-sm" %>
 <%= link_to 'Back', users_path, class: "btn btn-default btn-sm" %>
 <% end  %>

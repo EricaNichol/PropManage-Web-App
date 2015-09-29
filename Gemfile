@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'underscore-rails'
+gem 'gmaps4rails'
+gem 'geocoder'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'country-select'

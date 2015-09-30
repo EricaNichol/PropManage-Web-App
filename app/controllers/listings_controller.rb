@@ -5,6 +5,7 @@ class ListingsController < ApplicationController
   # GET /listings.json
   def index
     @listings = Listing.all
+    # @listings = Listing.where.not(longitude: nil, latitude: nil)
   end
 
   # GET /listings/1

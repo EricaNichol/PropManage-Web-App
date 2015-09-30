@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929234019) do
+ActiveRecord::Schema.define(version: 20150930222600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "features", force: :cascade do |t|
+    t.string   "tag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "featurings", force: :cascade do |t|
+    t.integer  "listing_id"
+    t.integer  "feature_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "featurings", ["feature_id"], name: "index_featurings_on_feature_id", using: :btree
+  add_index "featurings", ["listing_id"], name: "index_featurings_on_listing_id", using: :btree
 
   create_table "feed_entries", force: :cascade do |t|
     t.string   "title"
@@ -56,5 +72,7 @@ ActiveRecord::Schema.define(version: 20150929234019) do
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
 
+  add_foreign_key "featurings", "features"
+  add_foreign_key "featurings", "listings"
   add_foreign_key "listings", "users"
 end

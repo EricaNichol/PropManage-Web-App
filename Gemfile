@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'feedjira'
+gem 'nokogiri'
+gem 'capybara'
 gem 'underscore-rails'
 gem 'gmaps4rails'
 gem 'geocoder'

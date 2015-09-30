@@ -7,13 +7,14 @@
     </div>
     <div class="navbar-body">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "View All", listings_path %></li>
-        <li><%= link_to "Start Listing", new_session_path %></li>
+        <!-- <li><%= link_to "View All", listings_path %></li>
+        <li><%= link_to "Start Listing", new_session_path %></li> -->
         <li><button class="btn btn-default dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown"     aria-haspopup="true" aria-expanded="true">MENU<i class="fa fa-bars"></i></button>
           <ul class="dropdown-menu">
           <li><a href="#"><b>ABOUT US</b></a></li>
           <li><a href="#"><b>FAQ</b></a></li>
           <li><a href="www.google.com"><b>CONTACT US</b></a></li>
+          <li><a href="/listings/new"><b>START LISTING</b></a></li>
               <% if user_signed_in? %>
           <li><%= link_to "SIGN OUT", sessions_path, method: :delete %></li>
             <% else %>

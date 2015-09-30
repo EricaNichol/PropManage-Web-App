@@ -8,5 +8,6 @@ resources :sessions, only: [:new, :create] do
 end
 
 resources :listings
+resources :feed_entries, only: [:index]
 
 end

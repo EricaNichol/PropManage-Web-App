@@ -11,4 +11,6 @@ end
 resources :listings
 resources :feed_entries, only: [:index]
 
+resources :nearby_listings, only: [:index]
+
 end

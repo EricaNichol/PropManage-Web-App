@@ -7,6 +7,8 @@
   <%= f.input :city %>
   <%= f.input :image %>
   <%= f.input :country, as: :select, collection: ActionView::Helpers::FormOptionsHelper::COUNTRIES  %>
+
+  <%= f.association :features, collection: @features.map { |x| x.tag }, as: :check_boxes %>
 <%= f.submit "List", class: "btn btn-primary btn-sm" %>
 <%= link_to 'Back', users_path, class: "btn btn-default btn-sm" %>
 <% end  %>

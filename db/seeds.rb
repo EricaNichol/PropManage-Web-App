@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+["Kitchen","Internet","TV","Heating","Air Conditioning", "Washer", "Dryer", "Gym", "Guest Parking", "Internet", "Pets Allowed", "Elevator", "Smoking", "Wheelchair Accessible"].each do |feature|
+  Feature.create(tag: feature)
+end

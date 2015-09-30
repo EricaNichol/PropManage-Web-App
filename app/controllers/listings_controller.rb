@@ -16,6 +16,7 @@ class ListingsController < ApplicationController
   # GET /listings/new
   def new
     @listing = Listing.new
+    @features = Feature.all
   end
 
   # GET /listings/1/edit

@@ -6,6 +6,13 @@
         <% end %>
     </div>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+        <% if user_signed_in? %>
+          <p id="sign_in_name">
+            Hi <%= current_user.first_name %>
+          </p>
+        <% end %>
+        </li>
         <!-- <li><%= link_to "View All", listings_path %></li>
         <li><%= link_to "Start Listing", new_session_path %></li> -->
         <li><button class="btn btn-default dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown"     aria-haspopup="true" aria-expanded="true">MENU<i class="fa fa-bars"></i></button>
@@ -18,6 +25,7 @@
           <li><a href="/listings/new"><b>START LISTING</b></a></li>
           <li><%= link_to "SIGN OUT", sessions_path, method: :delete %></li>
             <% else %>
+          <li><a href="/users/new"><b>SIGN UP</b></a></li>
           <li><%= link_to "SIGN IN", new_session_path %></li>
         </ul>
             <% end %>

@@ -45,7 +45,8 @@
   <h4>Comments</h4>
   <% @listing.comments.each do |comment| %>
   <div class="well">
-    <%= comment.content %>
+    <p>"<%= comment.content %>"</p><br>
+    <p>Date <%= formatted_date(comment.created_at) %></b><br>
   </div>
   <% end %>
 </div>

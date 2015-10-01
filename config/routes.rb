@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
 root 'welcome#index'
 
-resources :users
+resources :users do
+  resources :listings
+end
 
 resources :sessions, only: [:new, :create] do
   delete :destroy, on: :collection

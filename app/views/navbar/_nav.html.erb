@@ -20,8 +20,9 @@
           <li><a href="#"><b>ABOUT US</b></a></li>
           <li><a href="#"><b>FAQ</b></a></li>
           <li><a href="www.google.com"><b>CONTACT US</b></a></li>
-          <li><a href="/listings/new"><b>START LISTING</b></a></li>
+          <li><a href="/users/new"><b>SIGN UP</b></a></li>
               <% if user_signed_in? %>
+          <li><a href="/listings/new"><b>START LISTING</b></a></li>
           <li><%= link_to "SIGN OUT", sessions_path, method: :delete %></li>
             <% else %>
           <li><a href="/users/new"><b>SIGN UP</b></a></li>

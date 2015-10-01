@@ -1,56 +1,68 @@
 <div class='container'>
+
   <div class='col-md-6'>
-   <%= image_tag @listing.image, id: "showImage"%>
-    <h3><%= @listing.description %></h3>
-      <p><%=  @listing.full_address %></p>
-        <h4>Features</h4>
-      <p><% @listing.features.each do |x|%>
-          <b><%= x.name %></b>
-            <% end %>
-      </p>
-  <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-info btn-sm" %>
-  <%= link_to 'Back', listings_path, class: "btn btn-default btn-sm"  %>
+    <%= image_tag @listing.image, id: "showImage"%>
   </div>
+
   <div class='col-md-6'>
     <div>
       <div id="map" style='height: 400px;'></div>
     </div>
-  <p>
-   MAP IS HERE
-  </p>
   </div>
 </div>
+
+<div class='container'>
+  <h3>About This Listing</h3>
+  <p><%= @listing.description %></p>
+<hr>
+  <h3>Located at:</h3>
+  <p><%= @listing.suite_no %><%= @listing.address %></p>
+  <p><%= @listing.city %>,<%= @listing.country %></p>
+<hr>
+  <h3>Features:</h3>
+  <br>
+    <% @listing.features.each do |x|%>
+  <p id='featureListing'>
+      <%= x.name %>
+  </p>
+    <% end %>
+<hr>
+  <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-info btn-sm" %>
+  <%= link_to 'Back', listings_path, class: "btn btn-default btn-sm"  %>
+</div>
+
+
 <br><br>
 <div class="container">
-<%= simple_form_for [@listing, @comment] do |f| %>
+  <%= simple_form_for [@listing, @comment] do |f| %>
   <%= f.input :content, label: "Comment" %>
   <%= f.submit "Post", class: "btn btn-primary btn-sm" %>
-<% end %>
+  <% end %>
 </div>
 
 
 <div class="container">
   <h4>Comments</h4>
-<% @listing.comments.each do |comment| %>
+  <% @listing.comments.each do |comment| %>
   <div class="well">
     <%= comment.content %>
   </div>
-<% end %>
+  <% end %>
 </div>
 
 
 <script type="text/javascript">
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers([
-      {
-        "lat": <%= @listing.latitude %>,
-        "lng": <%= @listing.longitude %>,
-        "infowindow": "<%= @listing.address %>"
-      }
-    ]);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-    handler.getMap().setZoom(15);
-  });
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers([
+    {
+      "lat": <%= @listing.latitude %>,
+      "lng": <%= @listing.longitude %>,
+      "infowindow": "<%= @listing.address %>"
+    }
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+  handler.getMap().setZoom(15);
+});
 </script>

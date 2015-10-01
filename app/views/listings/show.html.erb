@@ -4,10 +4,12 @@
   <div class='col-md-6'>
    <%= image_tag @listing.image, id: "showImage"%>
     <h3><%= @listing.description %></h3>
-    <p><%=  @listing.full_address %></p>
-    <p>
-      MORE FEATURES AND TAGS HERE
-    </p>
+      <p><%=  @listing.full_address %></p>
+        <h4>Features</h4>
+      <p><% @listing.features.each do |x|%>
+          <b><%= x.name %></b>
+            <% end %>
+      </p>
   <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-info btn-sm" %>
   <%= link_to 'Back', listings_path, class: "btn btn-default btn-sm"  %>
   </div>

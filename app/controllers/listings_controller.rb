@@ -28,6 +28,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
 
+
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
@@ -71,6 +72,6 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:description, :address, :suite_no, :postal, :city, :country, :image, :user_id )
+      params.require(:listing).permit([:description, :address, :suite_no, :postal, :city, :country, :image, :user_id, {feature_ids:[]}])
     end
 end

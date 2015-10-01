@@ -3,8 +3,8 @@ class Listing < ActiveRecord::Base
 
   belongs_to :user
 
-  has_many :featurings, :dependent => :destroy
   has_many :features, through: :featurings
+  has_many :featurings, dependent: :destroy
 
 
   mount_uploader :image, ImageUploader

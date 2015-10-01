@@ -6,6 +6,7 @@ class Listing < ActiveRecord::Base
   has_many :features, through: :featurings
   has_many :featurings, dependent: :destroy
 
+  has_many :comments, as: :commentable
 
   mount_uploader :image, ImageUploader
 

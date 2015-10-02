@@ -6,8 +6,8 @@
   <% @feedentries.each do |entry| %>
 <div class="media">
   <div class="media-left media-middle">
-    <a href="#">
-      <%= image_tag entry.image_craigslist.url(:medium) %>
+    <a href="<%= entry.url %>">
+      <%= image_tag entry.image_craigslist.url(:thumb) %>
     </a>
   </div>
   <div class="media-body">

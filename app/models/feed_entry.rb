@@ -1,7 +1,7 @@
 class FeedEntry < ActiveRecord::Base
 
 
-  mount_uploader :image_craigslist, ImageUploader
+  mount_uploader :image_craigslist, ImageCraigslistUploader
 
 def self.update_from_feed(url = "http://vancouver.craigslist.ca/search/apa?format=rss")
   feed = Feedjira::Feed.fetch_and_parse url

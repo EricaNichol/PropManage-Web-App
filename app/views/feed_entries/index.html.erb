@@ -6,13 +6,13 @@
   <% @feedentries.each do |entry| %>
 <div class="media">
   <div class="media-left media-middle">
-    <a href="<%= entry.url %>">
+    <a href="<%= entry %>">
       <%= image_tag entry.image_craigslist.url(:thumb) %>
     </a>
   </div>
   <div class="media-body">
-    <h4 class="media-heading"><%= entry.title.truncate(50) %></h4>
-      <p>
+    <h3 class="media-heading"><%= entry.title.truncate(70) %></h3>
+      <p id="feedfont">
         <%= entry.description.truncate(250) %>
       </p>
   </div>

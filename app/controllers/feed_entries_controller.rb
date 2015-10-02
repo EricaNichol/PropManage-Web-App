@@ -5,4 +5,8 @@ class FeedEntriesController < ApplicationController
     @listings    = Listing.all
   end
 
+  def show
+
+  end
+
 end

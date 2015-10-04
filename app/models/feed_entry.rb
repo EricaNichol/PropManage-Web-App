@@ -21,7 +21,6 @@ def self.update_from_feed(url = "http://vancouver.craigslist.ca/search/apa?forma
 
 def self.update_from_kijiji(url)
   feed = Feedjira::Feed.fetch_and_parse url
-  byebug
     feed.entries.first(30).each do |entry|
       unless exists? guid: entry.id
         create!(

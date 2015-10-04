@@ -32,7 +32,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     respond_to do |format|
       if @listing.save
-        $client.update("First Tweet From my App")
+        $client.update("New Listing #{@listing.description}#{@listing.address}")
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.json { render :show, status: :created, location: @listing }
       else

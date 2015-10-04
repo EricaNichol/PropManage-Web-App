@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
-
+  before_action :authorize!, only: [:edit, :update, :destroy]
   # GET /listings
   # GET /listings.json
   def index
@@ -75,5 +75,9 @@ class ListingsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
       params.require(:listing).permit([:description, :address, :suite_no, :postal, :city, :country, :image, :user_id, {feature_ids:[]}])
+    end
+
+    def authorize!
+      redirect_to @listing, alert: "Access Denied" unless can? :manage, @listing
     end
 end

@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
 root 'welcome#index'
 
+  get "/auth/twitter"
+  get "/auth/:provider/callback" => "callbacks#index"
+
 resources :users do
   resources :listings
 end

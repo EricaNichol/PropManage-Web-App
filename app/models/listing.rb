@@ -13,7 +13,10 @@ class Listing < ActiveRecord::Base
   after_validation :geocode
 
 
+
   def full_address
     "#{suite_no} #{address}, #{city}, #{postal}, #{country}"
   end
+
+
 end

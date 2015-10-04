@@ -1,0 +1,2 @@
+module FeedNoPicsHelper
+end

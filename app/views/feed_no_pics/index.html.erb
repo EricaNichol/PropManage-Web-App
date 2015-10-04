@@ -1,0 +1,21 @@
+<div class="page-header">
+  <h1>LISTINGS<small>//See what are available</small></h1>
+</div>
+
+<div class="container">
+  <% @feed_no_pics.each do |entry| %>
+  <% if entry.image_craigslist.present? == false %>
+<div class="media">
+  <div class="media-body">
+    <h3 id="no_pic_heading">
+      <a href="<%= entry.url %>"><%= entry.title.truncate(70) %></a>
+    </h3>
+      <p id="feedfont">
+        <%= entry.description.truncate(250) %>
+      </p>
+  </div>
+  <hr>
+</div>
+  <% end %>
+  <% end %>
+</div>

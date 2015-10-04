@@ -17,6 +17,6 @@ end
 
 resources :feed_entries, only: [:index]
 
-
+resources :feed_no_pics, only: [:index]
 
 end

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'omniauth'
 gem 'feedjira'
 gem 'nokogiri'
 gem 'capybara'

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'omniauth'
+
+gem 'omniauth-twitter'
 gem 'feedjira'
 gem 'nokogiri'
 gem 'capybara'

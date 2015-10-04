@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'cancancan'
 gem 'twitter'
 gem 'feedjira'
 gem 'nokogiri'

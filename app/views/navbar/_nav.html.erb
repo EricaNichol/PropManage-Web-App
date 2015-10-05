@@ -7,40 +7,35 @@
     </div>
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
-        <li>
         <% if user_signed_in? %>
+        <li>
           <p id="sign_in_name">
-            Hi <%= current_user.first_name %>
+            Hi <%= current_user.first_name %> |
+            <%= link_to "LIST", new_listing_path %> |
+            <%= link_to "SIGN OUT", sessions_path, method: :delete %> |
           </p>
-        <% end %>
         </li>
-        <li><button class="btn btn-default dropdown-toggle" type="button" id="menuButton" data-toggle="dropdown"     aria-haspopup="true" aria-expanded="true">MENU<i class="fa fa-bars"></i></button>
-          <ul class="dropdown-menu">
-          <li><a href="#"><b>ABOUT US</b></a></li>
-          <li><a href="#"><b>FAQ</b></a></li>
-          <li><a href="www.google.com"><b>CONTACT US</b></a></li>
-              <% if user_signed_in? %>
-          <li><a href="/listings/new"><b>START LISTING</b></a></li>
-          <li><%= link_to "SIGN OUT", sessions_path, method: :delete %></li>
             <% else %>
-          <li><a href="/users/new"><b>SIGN UP</b></a></li>
           <li><%= link_to "SIGN IN", new_session_path %></li>
-        </ul>
             <% end %>
-      </li>
+        </ul>
     </div>
     <div class="clearfix" id="navbar2">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="/listings">Our Listings</a></li>
-        <li><a href="/feed_entries">Web Listings</a></li>
-        <!-- <li><a href="/feed_no_pics">Sources</a></li> -->
+        <li><a href="/listings">HOME</a></li>
+        <li><a href="/listings">ABOUT</a></li>
+        <li><a href="/listings">LISTINGS</a></li>
+        <li><a href="/feed_entries">WEB LISTINGS</a></li>
+        <li><a href="/feed_entries">CONTACT US</a></li>
+        <li><a href="/listings">FAQ</a></li>
+        <li><a href="/users/new">REGISTER</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right" id="searchbar">
         <li>
           <%= form_tag feed_entries_path, method: :get do %>
            <p>
              <%= search_field_tag :search, params[:search] %>
-             <%= submit_tag "Search", name: nil, class: "btn btn-info btn-sm" %>
+             <%= submit_tag "Search", name: nil, class: "btn btn-edit btn-sm" %>
            </p>
           <% end %>
         </li>

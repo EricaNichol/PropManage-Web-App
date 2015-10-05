@@ -9,39 +9,40 @@
 
 #brand {
   font-family: 'Raleway', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
+  padding-left: 15px;
 }
 
 .navbar-default {
   height: 100px;
   font-family: 'Raleway', sans-serif;
-  background-color: #FF6866;
+  background-color: #459FDD;
 }
 
 .navbar-brand p {
   color:white;
 }
 
-nav navbar-nav navbar-right {
+.nav.navbar-nav.navbar-right {
+  color:white;
+}
+
+#navbar-right {
   color:white;
 }
 
 #menuButton {
   border: none;
   background: transparent;
-  padding-top: 15px;
+  padding-top: 20px;
   color: white;
   font-size: 20px;
 }
 
-#SignInMenu {
-  padding-left: 20px;
-}
 
 #sign_in_name {
-  padding-top: 20px;
+  padding-top: 25px;
   font-size:20px;
-  color:white;
 }
 
 p {
@@ -57,5 +58,5 @@ p {
 
 #searchbar {
   padding-top: 10px;
-  padding-right: 200px;
+  padding-right: 15px;
 }

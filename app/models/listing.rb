@@ -21,5 +21,10 @@ class Listing < ActiveRecord::Base
     "#{suite_no} #{address}, #{city}, #{postal}, #{country}"
   end
 
+  def self.search(item)
+    search_term = "%#{item}%"
+    where(["description ILIKE :term OR address ILIKE :term", {term: search_term}])
+  end
+
 
 end

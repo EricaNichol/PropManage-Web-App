@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 root 'welcome#index'
-
+  get '/search/:search' => 'search#index'
   get "/auth/twitter"
   get "/auth/:provider/callback" => "callbacks#index"
 

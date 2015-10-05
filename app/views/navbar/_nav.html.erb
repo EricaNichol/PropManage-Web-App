@@ -32,8 +32,18 @@
     <div class="clearfix" id="navbar2">
       <ul class="nav navbar-nav navbar-left">
         <li><a href="/listings">Our Listings</a></li>
-        <li><a href="/feed_entries">Sources w/ Thumbnails</a></li>
-        <li><a href="/feed_no_pics">Sources</a></li>
+        <li><a href="/feed_entries">Web Listings</a></li>
+        <!-- <li><a href="/feed_no_pics">Sources</a></li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right" id="searchbar">
+        <li>
+          <%= form_tag feed_entries_path, method: :get do %>
+           <p>
+             <%= search_field_tag :search, params[:search] %>
+             <%= submit_tag "Search", name: nil, class: "btn btn-info btn-xs" %>
+           </p>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>

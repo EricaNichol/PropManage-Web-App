@@ -27,23 +27,30 @@
   color:white;
 }
 
-#navbar-right {
-  // color:white;
-}
-
-#menuButton {
-  border: none;
-  background: transparent;
-  padding-top: 20px;
-  color: white;
-  font-size: 20px;
-}
+// #menuButton {
+//   border: none;
+//   background: transparent;
+//   padding-top: 20px;
+//   color: white;
+//   font-size: 20px;
+// }
 
 
 #sign_in_name {
   padding-top: 25px;
   font-size:20px;
 }
+
+#sign_in_name a {
+  color:white;
+}
+
+#sign_in_name a:hover {
+  color: #93648D;
+  background-color: transparent;
+}
+
+
 
 p {
   font-family: 'Raleway', sans-serif;
@@ -64,4 +71,5 @@ p {
 #searchbar {
   padding-top: 10px;
   padding-right: 15px;
+  color: black;
 }

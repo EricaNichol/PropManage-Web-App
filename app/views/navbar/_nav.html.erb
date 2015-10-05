@@ -6,10 +6,10 @@
         <% end %>
     </div>
     <div class="container-fluid">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right" id="sign_in_name">
         <% if user_signed_in? %>
         <li>
-          <p id="sign_in_name">
+          <p>
             Hi <%= current_user.first_name %> |
             <%= link_to "LIST", new_listing_path %> |
             <%= link_to "SIGN OUT", sessions_path, method: :delete %> |

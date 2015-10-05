@@ -28,7 +28,7 @@
 }
 
 #navbar-right {
-  color:white;
+  // color:white;
 }
 
 #menuButton {
@@ -55,6 +55,11 @@ p {
   font-size:20px;
   font-family: 'Raleway', sans-serif;
 }
+
+#navbar2 ul li a:hover {
+  color: #93648D ;
+}
+
 
 #searchbar {
   padding-top: 10px;

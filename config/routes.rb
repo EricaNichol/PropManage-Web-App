@@ -17,7 +17,7 @@ resources :listings do
   resources :comments, only: [:create]
 end
 
-
+resources :abouts, only: [:index]
 resources :feed_entries, only: [:index]
 
 resources :feed_no_pics, only: [:index]

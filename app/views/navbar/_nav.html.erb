@@ -6,23 +6,23 @@
         <% end %>
     </div>
     <div class="container-fluid">
-      <ul class="nav navbar-nav navbar-right" id="sign_in_name">
+      <ul class="nav navbar-nav navbar-right" >
         <% if user_signed_in? %>
         <li>
-          <p>
+          <p id="sign_in_name">
             Hi <%= current_user.first_name %> |
             <%= link_to "LIST", new_listing_path %> |
             <%= link_to "SIGN OUT", sessions_path, method: :delete %> |
           </p>
         </li>
             <% else %>
-          <li><%= link_to "SIGN IN", new_session_path %></li>
+          <li id="sign_in"><%= link_to "SIGN IN", new_session_path %></li>
             <% end %>
         </ul>
     </div>
     <div class="clearfix" id="navbar2">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="/">HOME</a></li>
+        <li><%= link_to "HOME", root_path %></li>
         <li><a href="/abouts">ABOUT</a></li>
         <li><a href="/listings">LISTINGS</a></li>
         <li><a href="/feed_entries">WEB LISTINGS</a></li>

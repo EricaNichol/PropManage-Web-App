@@ -3,6 +3,11 @@
 </div>
 
 <div class="container">
+  <h4><%= paginate @feedentries %></h4>
+</div>
+
+
+<div class="container">
   <% @feedentries.each do |entry| %>
   <% if entry.image_craigslist.present? %>
 <div class="media">
@@ -11,14 +16,19 @@
       <%= image_tag entry.image_craigslist.url(:thumb) %>
     </a>
   </div>
+    <% else %>
+    <div class="media">
+      <div class="media-left media-middle">
+          <i class="fa fa-camera-retro" id="nopic"></i>
+      </div>
+  <% end %>
   <div class="media-body">
-    <h3 class="media-heading"><%= entry.title.truncate(70) %></h3>
+    <h3 class="media-heading"><%= link_to entry.title.truncate(70) %></h3>
       <p id="feedfont">
         <%= entry.description.truncate(300) %>
       </p>
   </div>
   <hr>
 </div>
-  <% end %>
   <% end %>
 </div>

@@ -1,6 +1,10 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#nopic {
+  font-size: 200px;
+  color: #55ACEE;
+}
 
 #brand {
   font-family: 'Raleway', sans-serif;
@@ -48,4 +52,9 @@ p {
   color: white;
   font-size:20px;
   font-family: 'Raleway', sans-serif;
+}
+
+#searchbar {
+  padding-top: 10px;
+  padding-right: 200px;
 }

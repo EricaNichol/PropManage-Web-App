@@ -3,6 +3,11 @@
 </div>
 
 <div class="container">
+  <h4><%= paginate @feed_no_pics %></h4>
+</div>
+
+
+<div class="container">
   <% @feed_no_pics.each do |entry| %>
   <% if entry.image_craigslist.present? == false %>
 <div class="media">

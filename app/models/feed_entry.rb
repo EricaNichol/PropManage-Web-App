@@ -34,5 +34,9 @@ def self.update_from_kijiji(url)
     end
   end
 
+  def self.search(item)
+    search_term = "%#{item}%"
+    where(["title ILIKE :term  OR description ILIKE :term", {term: search_term}])
+  end
 
 end

@@ -1,9 +1,7 @@
 class WelcomeController < ApplicationController
+  layout 'landing'
 
   def index
-    @users        = User.all
-    @feedentries  = FeedEntry.all
-    @listings     = Listing.all
   end
 
 

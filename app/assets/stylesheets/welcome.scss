@@ -2,10 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//// THE DEFAULT IMAGE
 #nopic {
   font-size: 200px;
   color: #55ACEE;
 }
+
+////NAV BAR
 
 #brand {
   font-family: 'Raleway', sans-serif;
@@ -26,14 +29,15 @@
 .nav.navbar-nav.navbar-right {
   color:white;
 }
+// top right nav bar
 
 #sign_in a {
-  color:white;
+  color:#FF7260;
   font-size: 20px;
 }
 
 #sign_in a:hover {
-  color:#93648D;
+  color:white;
 }
 
 #sign_in_name {
@@ -42,20 +46,21 @@
 }
 
 #sign_in_name a {
-  color:white;
+  color: #EB77A6;
 }
 
 #sign_in_name a:hover {
-  color: #93648D;
+  color: white;
   background-color: transparent;
 }
-
 
 
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
 }
+
+//ROW 2 nav bar
 
 #navbar2 ul li a {
   color: white;
@@ -67,6 +72,14 @@ p {
   color: #93648D ;
 }
 
+#searchbar {
+  padding-top: 10px;
+  padding-right: 15px;
+  color: black;
+}
+
+////WELCOME PAGE
+//
 #homepage {
   background-image: url(homebg.jpg);
   margin: 0;
@@ -74,9 +87,20 @@ p {
   text-align: center;
 }
 
+#welcome_button {
+  background-color: #FF7260;
+  border: none;
+  border-radius: 0;
+}
 
-#searchbar {
-  padding-top: 10px;
-  padding-right: 15px;
-  color: black;
+#welcome_div {
+  position:relative;
+    top: 250px;
+}
+
+.jumbotron {
+  background-color: #459FDD;
+  opacity: 0.8;
+  font-family: 'Raleway', sans-serif;
+  color:white;
 }

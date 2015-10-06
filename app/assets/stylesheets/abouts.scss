@@ -1,3 +1,24 @@
 // Place all the styles related to the abouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
+.panel-heading {
+  background-color: #FFC33C !important;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+  height:80px;
+}
+
+.panel-body {
+  background-color: #39464E !important;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  height:500;
+  color: white;
+}

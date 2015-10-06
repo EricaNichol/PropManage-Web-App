@@ -2,10 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
+//background
+
+body {
+  background-image: url('/assets/swirl_pattern.png');
+}
+
+
 //// THE DEFAULT IMAGE
 #nopic {
   font-size: 200px;
-  color: #55ACEE;
+  text-shadow: 3px 0 0 #000, 0 -3px 0 #000, 0 3px 0 #000, -3px 0 0 #000;
+  color: #FFC33C;
 }
 
 ////NAV BAR
@@ -69,7 +80,7 @@ p {
 }
 
 #navbar2 ul li a:hover {
-  color: #93648D ;
+  color: #FF4C65 ;
 }
 
 #searchbar {
@@ -81,14 +92,14 @@ p {
 ////WELCOME PAGE
 //
 #homepage {
-  background-image: url(homebg.jpg);
+  background-image: url(vancouver.jpg);
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
 #welcome_button {
-  background-color: #FF7260;
+  background-color: #FF4C65;
   border: none;
   border-radius: 0;
 }
@@ -100,7 +111,16 @@ p {
 
 .jumbotron {
   background-color: #459FDD;
+  text-shadow: -2px 2px black;
   opacity: 0.8;
   font-family: 'Raleway', sans-serif;
   color:white;
+}
+
+//abouts
+
+.container .info {
+  height:70px;
+  width: 900px;
+  color: #42C79C;
 }

@@ -15,15 +15,8 @@
       Your Current Listings <i class="fa fa-book"></i>
     </div>
     <div class="panel-body list_display">
-          <% current_user.listings.each do |x| %>
-            <div class="container">
-              <p>
-                <h3><%= link_to x.description, x %></h3>
-                  <%= x.address %>, Created at:
-                  <%= formatted_date(x.created_at) %>
-                  <%= link_to "Delete", "/listings/#{x.id}", method: :delete, class: "btn btn-delete btn-xs" %>
-              </p>
-            </div>
+          <% @listings.each do |listing| %>
+            <%= render "/listings/current_listing", listing: listing %>
             <hr>
           <% end %>
 

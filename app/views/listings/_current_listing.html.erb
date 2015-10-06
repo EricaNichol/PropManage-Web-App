@@ -1,0 +1,8 @@
+<div class="container current_listings" id="<%= dom_id(listing) %>">
+  <p>
+    <h3><%= link_to listing.description, listing %></h3>
+      <%= listing.address %>, Created at:
+      <%= formatted_date(listing.created_at) %>
+      <%= link_to "Delete", "/listings/#{listing.id}", method: :delete, class: "btn btn-danger btn-xs" %>
+  </p>
+</div>

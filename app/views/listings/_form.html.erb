@@ -1,4 +1,4 @@
-<%= simple_form_for (@listing||Listing.new) do |f| %>
+<%= simple_form_for (@listing||Listing.new), remote: true do |f| %>
   <%= f.input :description %>
   <%= f.input :address %>
   <%= f.input :suite_no %>

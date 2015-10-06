@@ -17,6 +17,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/new
   def new
+    @listings     = current_user.listings
     @listing      = Listing.new
     @listing.user = current_user
     @features     = Feature.all
@@ -33,7 +34,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     respond_to do |format|
       if @listing.save
-        $client.update("New Listing #{@listing.description}#{@listing.address}")
+        # $client.update("New Listing #{@listing.description}#{@listing.address}")
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.js { render :create_success }
       else
@@ -62,7 +63,7 @@ class ListingsController < ApplicationController
   def destroy
     @listing.destroy
     respond_to do |format|
-      format.html { render :new, notice: 'Listing was successfully destroyed.' }
+      format.html { redirect_to new_listing_path, notice: 'Listing was successfully destroyed.' }
       format.js { head :no_content }
     end
   end

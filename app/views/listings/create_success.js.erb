@@ -1,1 +1,4 @@
-$('.panel.list_display').append("<%= j render  %>")
+$('.panel-body.list_display').append("<%= j render 'current_listing', listing: @listing  %>")
+
+<% @listing = Listing.new %>
+$('.panel-body.list').replaceWith("<div class='panel-body list'><%= j render 'form' %><div>");

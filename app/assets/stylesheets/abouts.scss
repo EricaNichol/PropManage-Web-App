@@ -2,15 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.panel-heading {
+.panel-heading.abouts{
   background-color: #459FDD !important;
   color: white;
   font-family: 'Raleway', sans-serif;
-  font-size: 25px;
-  height:50px;
+  font-size: 20px;
+  // height:50px;
 }
 
-.panel-body {
+.panel-body.abouts{
   // background-color: #black !important;
   background-color: #E4F6F8 !important;
   font-family: 'Raleway', sans-serif ;
@@ -30,7 +30,7 @@
   margin-left: 35%;
 }
 
-.container .info {
+.container.info {
   // height:70px;
   width: 800px;
   color: #FF4C65;

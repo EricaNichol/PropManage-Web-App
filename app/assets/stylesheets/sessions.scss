@@ -1,3 +1,25 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container.sign-in {
+  width: 600px;
+}
+
+.panel.sign-in {
+ text-align: center;
+ font-family: 'Raleway', sans-serif ;
+ color:#505050;
+}
+
+.panel-heading {
+  background-color: #459FDD !important;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+.panel-body {
+  background-color: #E4F6F8 !important;
+  font-family: 'Raleway', sans-serif ;
+  font-size: 15px;
+}

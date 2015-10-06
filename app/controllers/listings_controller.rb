@@ -35,10 +35,10 @@ class ListingsController < ApplicationController
       if @listing.save
         $client.update("New Listing #{@listing.description}#{@listing.address}")
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
-        format.json { render :show, status: :created, location: @listing }
+        format.js { render :create_success }
       else
         format.html { render :new }
-        format.json { render json: @listing.errors, status: :unprocessable_entity }
+        format.js { render json: @listing.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -62,8 +62,8 @@ class ListingsController < ApplicationController
   def destroy
     @listing.destroy
     respond_to do |format|
-      format.html { redirect_to listings_url, notice: 'Listing was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { render :new, notice: 'Listing was successfully destroyed.' }
+      format.js { head :no_content }
     end
   end
 

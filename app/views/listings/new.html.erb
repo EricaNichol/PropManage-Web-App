@@ -21,6 +21,7 @@
                 <h3><%= link_to x.description, x %></h3>
                   <%= x.address %>, Created at:
                   <%= formatted_date(x.created_at) %>
+                  <%= link_to "Delete", "/listings/#{x.id}", method: :delete, class: "btn btn-delete btn-xs" %>
               </p>
             </div>
             <hr>

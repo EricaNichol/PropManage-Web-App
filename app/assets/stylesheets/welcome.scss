@@ -9,7 +9,8 @@
 
 body {
   // background-color: grey;
-  background-image: url('/assets/swirl_pattern.png');
+  background-image: url('/assets/congruent_pentagon.png');
+  // background-image: url('/assets/swirl_pattern.png');
 }
 
 
@@ -44,12 +45,12 @@ body {
 // top right nav bar
 
 #sign_in a {
-  color:#FF7260;
+  color: white;
   font-size: 20px;
 }
 
 #sign_in a:hover {
-  color:white;
+  color:#FF7260;
 }
 
 #sign_in_name {

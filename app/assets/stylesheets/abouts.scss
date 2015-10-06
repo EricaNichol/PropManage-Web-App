@@ -2,23 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
-
-
 .panel-heading {
   background-color: #FFC33C !important;
-  color: black;
+  color: #77787B;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
   height:80px;
 }
 
 .panel-body {
-  background-color: #39464E !important;
+  background-color: #black !important;
+  // background-color: #FBE2B4 !important;
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
   height:500;
-  color: white;
+  color: #77787B;
+}
+
+//abouts
+
+.container .info {
+  height:70px;
+  width: 900px;
+  color: #FF4C65;
+  font-family: 'Homemade Apple', cursive;
+}
+
+.container .rentwork {
+  width:900px;
+  color: #FF4C65
 }

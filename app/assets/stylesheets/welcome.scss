@@ -8,6 +8,7 @@
 //background
 
 body {
+  // background-color: grey;
   background-image: url('/assets/swirl_pattern.png');
 }
 
@@ -110,17 +111,9 @@ p {
 }
 
 .jumbotron {
-  background-color: #459FDD;
+  background-color: transparent;
   text-shadow: -2px 2px black;
-  opacity: 0.8;
+  // opacity: 0.8;
   font-family: 'Raleway', sans-serif;
   color:white;
-}
-
-//abouts
-
-.container .info {
-  height:70px;
-  width: 900px;
-  color: #42C79C;
 }

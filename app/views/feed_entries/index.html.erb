@@ -1,34 +1,36 @@
-<div class="container">
-  <h1>LISTINGS<small>//what's available</small></h1>
-</div>
-
-<div class="container">
-  <h4><%= paginate @feedentries %></h4>
-</div>
-
-
-<div class="container">
-  <% @feedentries.each do |entry| %>
-  <% if entry.image_craigslist.present? %>
-<div class="media">
-  <div class="media-left media-middle">
-    <a href="<%= entry.url %>">
-      <%= image_tag entry.image_craigslist.url(:thumb) %>
-    </a>
-  </div>
-    <% else %>
-    <div class="media">
-      <div class="media-left media-middle">
-          <i class="fa fa-camera-retro" id="nopic"></i>
+<div class="container animated fadeIn">
+  <div class="panel feedlist">
+    <div class="panel-heading feedlist">
+      <h1>LISTINGS<small>//what's available</small></h1>
+    </div>
+    <div class="panel-body feedlist">
+      <div class="container">
+        <h4><%= paginate @feedentries %></h4>
       </div>
-  <% end %>
-  <div class="media-body">
-    <h3 class="media-heading"><%= link_to entry.title.truncate(70) %></h3>
-      <p id="feedfont">
-        <%= entry.description.truncate(300) %>
-      </p>
-  </div>
-  <hr>
-</div>
-  <% end %>
+        <% @feedentries.each do |entry| %>
+
+        <div class="media">
+          <% if entry.image_craigslist.present? %>
+            <img src="<%= entry.image_craigslist.url(:thumb) %>" class="media-left pic">
+            <!-- <div class="media-left pic">
+              <%= image_tag entry.image_craigslist.url(:thumb) %>
+            </div> -->
+          <% else %>
+            <img src="/assets/default.gif" class="media-left pic">
+          <% end %>
+
+            <div class="media-right content">
+              <%= link_to entry.title.truncate(70) %>
+              <p id="feedfont">
+                <%= entry.description.truncate(300) %>
+              </p>
+            </div>
+        </div>
+
+
+          <% end %>
+
+
+      </div>
+    </div>
 </div>

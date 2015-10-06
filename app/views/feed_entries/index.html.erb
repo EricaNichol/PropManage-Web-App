@@ -11,26 +11,20 @@
 
         <div class="media">
           <% if entry.image_craigslist.present? %>
-            <img src="<%= entry.image_craigslist.url(:thumb) %>" class="media-left pic">
+            <img src="<%= entry.image_craigslist.url(:thumb) %>" class="col-md-3 media-left pic">
             <!-- <div class="media-left pic">
               <%= image_tag entry.image_craigslist.url(:thumb) %>
             </div> -->
           <% else %>
-            <img src="/assets/default.gif" class="media-left pic">
+            <img src="/assets/default.gif" class="col-md-3 media-left pic">
           <% end %>
 
-            <div class="media-right content">
-              <%= link_to entry.title.truncate(70) %>
-              <p id="feedfont">
-                <%= entry.description.truncate(300) %>
-              </p>
+            <div class="col-md-9 media-right">
+                <h3><%= link_to entry.title.truncate(50), entry.url %></h3>
+                <p><%= entry.description.truncate(300) %></p>
             </div>
         </div>
-
-
           <% end %>
-
-
       </div>
     </div>
 </div>

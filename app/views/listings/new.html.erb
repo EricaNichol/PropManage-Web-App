@@ -1,4 +1,31 @@
-<div class="container">
-<h1>List your Property</h1>
-<%= render 'form' %>
+<div class="col-md-6 container list animated fadeIn">
+  <div class="panel list">
+    <div class="panel-heading list">
+      <i class="fa fa-list"></i> List a Property
+    </div>
+    <div class="panel-body list">
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6 container list_display">
+  <div class="panel list_display">
+    <div class="panel-heading list_display">
+      Your Current Listings <i class="fa fa-book"></i>
+    </div>
+    <div class="panel-body list_display">
+          <% current_user.listings.each do |x| %>
+            <div class="container">
+              <p>
+                <h3><%= link_to x.description, x %></h3>
+                  <%= x.address %>, Created at:
+                  <%= formatted_date(x.created_at) %>
+              </p>
+            </div>
+            <hr>
+          <% end %>
+
+    </div>
+  </div>
 </div>

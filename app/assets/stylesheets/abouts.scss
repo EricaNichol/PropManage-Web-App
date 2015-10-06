@@ -3,32 +3,41 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .panel-heading {
-  background-color: #FFC33C !important;
-  color: #77787B;
+  background-color: #459FDD !important;
+  color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 25px;
-  height:80px;
+  height:50px;
 }
 
 .panel-body {
-  background-color: #black !important;
-  // background-color: #FBE2B4 !important;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  // background-color: #black !important;
+  background-color: #E4F6F8 !important;
+  font-family: 'Raleway', sans-serif ;
+  font-size: 40px;
   height:500;
-  color: #77787B;
+  color: #505050;
+  // -webkit-text-stroke: 1px black;
 }
 
 //abouts
 
-.container .info {
-  height:70px;
-  width: 900px;
-  color: #FF4C65;
-  font-family: 'Homemade Apple', cursive;
+.image-circle {
+  background-image: url(teambacktable.jpg);
+  border-radius: 50%;
+  height:250px;
+  width:250px;
+  margin-left: 35%;
 }
 
-.container .rentwork {
-  width:900px;
-  color: #FF4C65
+.container .info {
+  // height:70px;
+  width: 800px;
+  color: #FF4C65;
+  margin-top: 20px;
 }
+
+// .container .rentwork {
+//   width:900px;
+//   color: #FF4C65
+// }

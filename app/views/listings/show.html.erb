@@ -1,14 +1,37 @@
-<div class='container'>
-
-  <div class='col-md-6'>
-    <%= image_tag @listing.image, id: "showImage"%>
-  </div>
-
-  <div class='col-md-6'>
-    <div>
+<div class="col-md-6 container list_show animated fadeIn">
+  <div class="panel list_show">
+    <div class="panel-heading list_show">
+      <i class="fa fa-map"> Views </i>
+    </div>
+    <div class="panel-body list_show">
       <div id="map" style='height: 400px;'></div>
     </div>
   </div>
+</div>
+
+<div class="col-md-6 container list_feature animated fadeIn">
+  <div class="panel list_feature">
+    <div class="panel-heading list_feature">
+       About the Listing <i class="fa fa-hand-o-down"></i>
+    </div>
+    <div class="panel-body list_feature pic">
+      <% if @listing.image.present? %>
+        <%= image_tag @listing.image %>
+      <% else %>
+        <img src="/assets/default.gif">
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<div class='container'>
+
+  <div class='col-md-6'>
+  </div>
+
+  <div class='col-md-6'>
+
 </div>
 
 <div class='container'>

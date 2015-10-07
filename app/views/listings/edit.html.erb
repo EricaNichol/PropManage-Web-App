@@ -4,9 +4,18 @@
       Edit Listing <i class="fa fa-pencil"></i>
     </div>
     <div class="panel-body edit">
-      <%= render 'form' %>
-      <%= link_to 'Show', @listing, class: "btn btn-info btn-sm" %>
+      <%= simple_form_for @listing do |f| %>
+        <%= f.input :description %>
+        <%= f.input :address %>
+        <%= f.input :suite_no %>
+        <%= f.input :postal %>
+        <%= f.input :city %>
+        <%= f.input :image %>
+        <%= f.input :country, as: :select, collection: ActionView::Helpers::FormOptionsHelper::COUNTRIES  %>
+        <%= f.association :features, as: :check_boxes %>
+      <%= f.submit "Update", class: "btn btn-primary btn-sm" %>
       <%= link_to 'Back', listings_path, class: "btn btn-warning btn-sm" %>
+      <% end  %>
     </div>
   </div>
 </div>

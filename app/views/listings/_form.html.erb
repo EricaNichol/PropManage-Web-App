@@ -1,11 +1,11 @@
-<%= simple_form_for (@listing||Listing.new), remote: true do |f| %>
+<%= simple_form_for (@listing||Listing.new) do |f| %>
   <%= f.input :description %>
   <%= f.input :address %>
-  <%= f.input :suite_no %>
+  <%= f.input :price %>
   <%= f.input :postal %>
   <%= f.input :city %>
   <%= f.input :image %>
   <%= f.input :country, as: :select, collection: ActionView::Helpers::FormOptionsHelper::COUNTRIES  %>
   <%= f.association :features, as: :check_boxes %>
-<%= f.submit "Listg", class: "btn btn-primary btn-sm" %>
+<%= f.submit "List", class: "btn btn-primary btn-sm" %>
 <% end  %>

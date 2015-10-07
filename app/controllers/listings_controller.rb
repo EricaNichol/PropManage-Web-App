@@ -36,7 +36,7 @@ class ListingsController < ApplicationController
     respond_to do |format|
       if @listing.save
         $client.update("Hi #{@listing.description}#{@listing.address} has been listed")
-        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
+        format.html { redirect_to new_listing_path, notice: 'Listing was successfully created.' }
         format.js { render :create_success }
       else
         format.html { render :new, notice: "Error" }
@@ -76,7 +76,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit([:description, :address, :suite_no, :postal, :city, :country, :image, :user_id, {feature_ids:[]}])
+      params.require(:listing).permit([:description, :address, :price, :postal, :city, :country, :image, :user_id, {feature_ids:[]}])
     end
 
     def authorize!

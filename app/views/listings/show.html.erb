@@ -23,7 +23,8 @@
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body list_feature">
           <p><%= @listing.description %></p>
-          <p><%= @listing.suite_no %><%= @listing.address %></p>
+          <p><%= @listing.price %></p>
+          <p><%= @listing.address %></p>
           <p><%= @listing.city %><%= @listing.country %></p>
         <div class="check_boxes">
           <% @listing.features.each do |x|%>

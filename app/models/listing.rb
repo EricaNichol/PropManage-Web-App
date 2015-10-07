@@ -18,7 +18,7 @@ class Listing < ActiveRecord::Base
 
 
   def full_address
-    "#{suite_no} #{address}, #{city}, #{postal}, #{country}"
+    "#{address}, #{city}, #{postal}, #{country}"
   end
 
   def self.search(item)

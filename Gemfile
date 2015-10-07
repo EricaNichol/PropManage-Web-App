@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 
-
 gem 'twitter'
 gem 'feedjira'
 gem 'nokogiri'

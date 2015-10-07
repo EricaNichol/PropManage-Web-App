@@ -25,6 +25,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/1/edit
   def edit
+    
   end
 
   # POST /listings
@@ -38,8 +39,7 @@ class ListingsController < ApplicationController
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.js { render :create_success }
       else
-        format.html { render :new }
-        format.js { render json: @listing.errors, status: :unprocessable_entity }
+        format.html { render :new, notice: "Error" }
       end
     end
   end
@@ -64,7 +64,7 @@ class ListingsController < ApplicationController
     @listing.destroy
     respond_to do |format|
       format.html { redirect_to new_listing_path, notice: 'Listing was successfully destroyed.' }
-      format.js { head :no_content }
+      format.js { render :create_failure }
     end
   end
 

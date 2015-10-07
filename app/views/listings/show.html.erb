@@ -1,5 +1,4 @@
-<div class="col-md-6 container list_show animated fadeIn">
-  <div class="panel list_show">
+  <div class="col-md-6 container list_show animated fadeIn panel-group">
     <div class="panel-heading list_show">
       <i class="fa fa-map"> Views </i>
     </div>
@@ -9,69 +8,61 @@
   </div>
 </div>
 
-<div class="col-md-6 container list_feature animated fadeIn">
+<div class="col-md-6 panel-group container list_feature animated fadeIn" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel list_feature">
     <div class="panel-heading list_feature">
        About the Listing <i class="fa fa-hand-o-down"></i>
     </div>
+    <div class="panel-heading list_feature" role="tab" id="headingOne">
+      <h4 class="panel-title list_feature">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         Description
+       </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body list_feature">
+          <p><%= @listing.description %></p>
+          <p><%= @listing.suite_no %><%= @listing.address %></p>
+          <p><%= @listing.city %><%= @listing.country %></p>
+        <div class="check_boxes">
+          <% @listing.features.each do |x|%>
+            <%= x.name %>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <div class="panel-body list_feature pic">
       <% if @listing.image.present? %>
-        <%= image_tag @listing.image %>
+        <%= image_tag @listing.image, id:"listing_pic"%>
       <% else %>
         <img src="/assets/default.gif">
       <% end %>
     </div>
+
+<!-- <div class="col-md-6 container comment animated fadeIn"> -->
+  <div class="panel-heading comment">
+    <i class="fa fa-map"> Comments </i>
   </div>
-</div>
+  <div class="panel-body comment">
 
-
-<div class='container'>
-
-  <div class='col-md-6'>
-  </div>
-
-  <div class='col-md-6'>
+      <%= simple_form_for [@listing, @comment] do |f| %>
+      <%= f.input :content, label: "Comment" %>
+      <%= f.submit "Post", class: "btn btn-primary btn-sm" %>
+      <% end %>
 
 </div>
 
-<div class='container'>
-  <h3>About This Listing</h3>
-  <p><%= @listing.description %></p>
-<hr>
-  <h3>Located at:</h3>
-  <p><%= @listing.suite_no %><%= @listing.address %></p>
-  <p><%= @listing.city %>,<%= @listing.country %></p>
-<hr>
-  <h3>Features:</h3>
-  <br>
-    <% @listing.features.each do |x|%>
-  <p id='featureListing'>
-      <%= x.name %>
-  </p>
-    <% end %>
-<hr>
-  <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-info btn-sm" %>
-  <%= link_to 'Back', listings_path, class: "btn btn-default btn-sm"  %>
-</div>
 
-
-<br><br>
-<div class="container">
-  <%= simple_form_for [@listing, @comment] do |f| %>
-  <%= f.input :content, label: "Comment" %>
-  <%= f.submit "Post", class: "btn btn-primary btn-sm" %>
-  <% end %>
-</div>
-
-
-<div class="container">
-  <h4>Comments</h4>
   <% @listing.comments.each do |comment| %>
   <div class="well">
     <p>"<%= comment.content %>"</p><br>
     <p>Date <%= formatted_date(comment.created_at) %></b><br>
   </div>
-  <% end %>
+    <% end %>
+</div>
+<!-- </div> -->
+  </div>
 </div>
 
 

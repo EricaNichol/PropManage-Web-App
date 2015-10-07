@@ -2,6 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//container rentworks
+.panel-body.abouts_me p {
+  color: #218C8D;
+
+}
+
+.panel-heading.about_rent a {
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+}
+
+.panel-heading.about_rent a:hover {
+
+  color: #FF7260;
+}
+
 .panel-heading.abouts{
   background-color: #459FDD !important;
   color: white;

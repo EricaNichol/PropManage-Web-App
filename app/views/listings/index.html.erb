@@ -1,13 +1,21 @@
-<div>
-  <div id="map" style='width: 100%; height: 400px;'></div>
-</div>
+<div class="container animated fadeIn">
 
-<br>
+<div class="panel our_listings">
+
+<div class="panel-heading out_listings">
+    Listed <i class="fa fa-home"></i>
+</div>
+    <div id="map" style='width: 100%; height: 400px;'></div>
+  </div>
+
 
   <div class="row">
         <% @listings.each do |listing| %>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
+    <div class="col-md-4 container animated fadIn">
+      <div class="panel list_index">
+        <div class="panel-heading list_index">
+        </div>
+        <div class="panel-body list_index pic">
          <%= image_tag listing.image.url(:medium) %>
         <div class="caption">
           <h3><%= listing.description %></h3>
@@ -15,10 +23,13 @@
                       <%= listing.city %>, <%= listing.country %></small></p>
           <p><%= link_to "VIEW", listing, class: 'btn btn-info btn-sm' %></p>
         </div>
+        </div>
       </div>
     </div>
           <% end %>
   </div>
+</div>
+
 
   <script type="text/javascript">
     debugger

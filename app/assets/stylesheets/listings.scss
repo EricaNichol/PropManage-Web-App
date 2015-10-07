@@ -2,10 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-///show
-.panel-heading.list_feature {
+///index
 
+.panel-title.list_feature a {
+  text-decoration: none;
+  background-color: transparent;
+}
 
+.panel-title.list_feature a:hover {
+  color: #EB77A6;
 }
 
 #listing_pic {

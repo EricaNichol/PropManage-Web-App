@@ -3,16 +3,24 @@
     <div class="panel-heading abouts">
         ABOUT
     </div>
-    <div class="panel-body abouts">
-
+    <div class="panel-body abouts_me">
         <div class="image-circle">
         </div>
-
-      <div class="container info" >
+        <br>
+        <br>
+      <!-- <div class="container info" > -->
         <li><p>
-          I’m David Lin, a web developer and a recent graduate from CODECORE.
-          I am loving developing (so far) and this is my project.
+          I’m David, a web developer and a recent graduate from CODECORE.
         </p></li>
+        <br>
+        <li><p>
+          Worked in banking/finance for several years.
+        </p></li>
+        <br>
+        <li><p>
+          I am loving developing (so far) and this is my project.
+        </p>
+        </li>
         <br>
         <li><p>
           Purpose of this project is to show case what I learned in the 8 weeks.
@@ -23,38 +31,66 @@
            get in touch by email or you could stalk me through social media
          </p></li>
          <br>
-        <p>Looking for a Home? .OR..... Have a Home TO rent?</p>
-        <p>RentWork is a rental listing website platform to connect Tenants and Landlords.
-        The rental listings showcases a vast array of rental accomodations from
-        web resources such as Kijiji and Craigslist. </p>
-        <p>Users will be able to both list and search for the perfect listings.</p>
-      </div>
-
-<div class="container">
-    <h2>Features</h2>
-      <ul>
-        <li>
-        The site features basic CREATE, RETREIVE, UPDATE, DELETE (CRUD) functionalitiy with Comment feature.
-        </li>
-        <li>GeoMapping                                        </li>
-        <li>Search Button                                     </li>
-        <li>Scraping of websources via the Feedjira gem       </li>
-        <li>Automatic Twitter feed when an item gets posted   </li>
-        <li>Mailer                                            </li>
-        <li>Delay Job                                         </li>
-      </ul>
-      <h2>Techniques/Formats/Languages</h2>
-      <ul>
-        <li>AJAX              </li>
-        <li>Ruby on Rails     </li>
-        <li>JSON              </li>
-        <li>HTML              </li>
-        <li>JQUERY            </li>
-        <li>Javascript        </li>
-        <li>CSS               </li>
-        <li>Bootstrap         </li>
-      </ul>
+      <!-- </div> -->
     </div>
   </div>
 </div>
+
+
+<div class="panel-group container about_rent animated fadeIn" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel about_rent">
+    <div class="panel-heading about_rent">
+       What is RENT<i class="fa fa-home"></i>WORKS
+    </div>
+    <div class="panel-body abouts">
+      <p>Looking for a Home? .OR..... Have a Home TO rent?</p>
+      <p>RentWork is a rental listing website platform to connect Tenants and Landlords.
+      The rental listings showcases a vast array of rental accomodations from
+      web resources such as Kijiji and Craigslist. </p>
+      <p>Users will be able to both list and search for the perfect listings.</p>
+  </div>
+    <div class="panel-heading about_rent" role="tab" id="headingOne">
+      <h4 class="panel-title about_rent">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         Features
+       </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body about_rent">
+        <ul>
+          <li>
+          The site features basic CREATE, RETREIVE, UPDATE, DELETE (CRUD) functionalitiy with Comment feature.
+          </li>
+          <li>GeoMapping                                        </li>
+          <li>Search Button                                     </li>
+          <li>Scraping of websources via the Feedjira gem       </li>
+          <li>Automatic Twitter feed when an item gets posted   </li>
+          <li>Mailer                                            </li>
+          <li>Delay Job                                         </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel-heading about_rent" role="tab" id="headingTwo">
+      <h4 class="panel-title about_rent">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        Techniques/Formats/Languages
+       </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse about_rent" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body about_rent">
+        <ul>
+          <li>AJAX              </li>
+          <li>Ruby on Rails     </li>
+          <li>JSON              </li>
+          <li>HTML              </li>
+          <li>JQUERY            </li>
+          <li>Javascript        </li>
+          <li>CSS               </li>
+          <li>Bootstrap         </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

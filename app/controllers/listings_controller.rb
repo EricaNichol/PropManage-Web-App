@@ -25,7 +25,7 @@ class ListingsController < ApplicationController
 
   # GET /listings/1/edit
   def edit
-    
+
   end
 
   # POST /listings
@@ -35,7 +35,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     respond_to do |format|
       if @listing.save
-        # $client.update("New Listing #{@listing.description}#{@listing.address}")
+        $client.update("New Listing #{@listing.description}#{@listing.address}")
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.js { render :create_success }
       else

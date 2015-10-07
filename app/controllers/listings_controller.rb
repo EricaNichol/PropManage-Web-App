@@ -35,7 +35,7 @@ class ListingsController < ApplicationController
     @listing.user = current_user
     respond_to do |format|
       if @listing.save
-        $client.update("New Listing #{@listing.description}#{@listing.address}")
+        $client.update("Hi #{@listing.description}#{@listing.address} has been listed")
         format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.js { render :create_success }
       else

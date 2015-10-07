@@ -2,7 +2,6 @@ class Listing < ActiveRecord::Base
 
   belongs_to :user
 
-
   has_many :features, through: :featurings
   has_many :featurings, dependent: :nullify
   has_many :comments, as: :commentable

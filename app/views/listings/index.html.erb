@@ -33,7 +33,6 @@
 
 
   <script type="text/javascript">
-    debugger
     handler = Gmaps.build('Google');
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
       markers = handler.addMarkers(<%= raw listings_json(@listings).to_json %>);

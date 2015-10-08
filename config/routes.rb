@@ -21,5 +21,6 @@ resources :abouts, only: [:index]
 resources :feed_entries, only: [:index]
 
 resources :faqs, only: [:index]
+resources :contacts, only: [:index]
 
 end

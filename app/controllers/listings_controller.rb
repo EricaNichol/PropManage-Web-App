@@ -36,7 +36,7 @@ class ListingsController < ApplicationController
     respond_to do |format|
       if @listing.save
         $client.update("Hi #{@listing.description}#{@listing.address} has been listed")
-        format.html { redirect_to new_listing_path, notice: 'Listing was successfully created.' }
+        format.html { redirect_to @listing, notice: 'Listing was successfully created.' }
         format.js { render :create_success }
       else
         format.html { render :new, notice: "Error" }

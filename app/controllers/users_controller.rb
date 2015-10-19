@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to feed_entries_path, notice: 'User was successfully created.' }
       else
         format.html { render :new }

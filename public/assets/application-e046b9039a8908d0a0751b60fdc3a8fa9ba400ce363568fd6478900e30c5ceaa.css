@@ -12273,90 +12273,90 @@ div.field, div.actions {
   text-align: center;
   color: #505050;
 }
-/* line 10, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 10, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 body {
-  background-color: #EBFDD4;
+  background-image: url(/assets/congruent_pentagon-c929ba16ee39fcceb02db800468f8c0a1a435230cf292320f44fce325a0846db.png);
   margin-top: 150px;
 }
 
-/* line 21, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 21, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #brand {
   font-family: 'Raleway', sans-serif;
   font-size: 40px;
   padding-left: 15px;
 }
 
-/* line 27, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 27, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 .navbar-default {
   height: 100px;
   font-family: 'Raleway', sans-serif;
   background-color: #459FDD;
 }
 
-/* line 33, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 33, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 .navbar-brand p {
   color: white;
 }
 
-/* line 37, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 37, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 .nav.navbar-nav.navbar-right {
   color: white;
 }
 
-/* line 42, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 42, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #sign_in a {
   color: white;
   font-size: 20px;
 }
 
-/* line 47, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 47, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #sign_in a:hover {
   color: #FF7260;
 }
 
-/* line 51, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 51, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #sign_in_name {
   padding-top: 25px;
   font-size: 20px;
 }
 
-/* line 56, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 56, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #sign_in_name a {
   color: #EB77A6;
 }
 
-/* line 60, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 60, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #sign_in_name a:hover {
   color: white;
   background-color: transparent;
 }
 
-/* line 66, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 66, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
 }
 
-/* line 73, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 73, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #navbar2 ul li a {
   color: white;
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
 }
 
-/* line 79, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 79, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #navbar2 ul li a:hover {
   color: #FF4C65;
 }
 
-/* line 83, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 83, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #searchbar {
   padding-top: 10px;
   padding-right: 15px;
   color: black;
 }
 
-/* line 91, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 91, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #homepage {
   background-image: url(/assets/vancouver-4a916e1d52af5247310eed9b9fc9ff03de82f52a3c58aff304e2eace7f93fb08.jpg);
   margin: 0;
@@ -12364,20 +12364,20 @@ p {
   text-align: center;
 }
 
-/* line 99, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 99, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #welcome_button {
   background-color: #FF4C65;
   border: none;
   border-radius: 0;
 }
 
-/* line 105, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 105, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 #welcome_div {
   position: relative;
   top: 250px;
 }
 
-/* line 110, /Users/davelin/CodeCore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
+/* line 110, /Users/davelin/codecore/PropManage-Web-App/app/assets/stylesheets/welcome.scss.erb */
 .jumbotron {
   background-color: transparent;
   text-shadow: -2px 2px black;
